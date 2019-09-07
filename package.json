@@ -4,8 +4,11 @@
   "description": "shopping list",
   "main": "server.js",
   "scripts": {
+    "client-install": "yarn add --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "yarn start --prefix client",
+    "dev": "concurrently \"npm server\" \"npm run client\""
   },
   "author": "Adam",
   "license": "MIT",
